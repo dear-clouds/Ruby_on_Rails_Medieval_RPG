@@ -1,0 +1,32 @@
+<center>
+	<h1>Nouvelle quête</h1>
+
+	<%= form_for @quest do |f| %>
+	<% if @quest.errors.any? %>
+	<div class="error_messages">
+		<h2>Erreur</h2>
+		<ul>
+			<% for message in @quest.errors.full_messages %>
+			<li><%= message %></li>
+			<% end %>
+		</ul>
+	</div>
+	<% end %>
+	<p>
+		<span class="input-before"></span><%= f.text_field :title, :placeholder => "Titre" %><span class="input-after"></span>
+	</p>
+	<p>
+		<span class="input-before"></span><%= f.text_field :experience, :placeholder => "XP" %><span class="input-after"></span>
+	</p>
+	<p>
+		<%= f.text_area :content, size: "40x10", :placeholder => "Description" %>
+	</p>
+	<p>
+		<span class="input-before"></span><%= f.text_field :item, :placeholder => "Url de item" %><span class="input-after"></span>
+	</p>
+
+	<p>
+		<span class="input-before"></span><%= f.text_field :png, :placeholder => "Url du PNG" %><span class="input-after"></span>
+	</p>
+	<p><%= f.submit "Valider !" %></p>
+	<% end %>

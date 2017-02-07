@@ -1,0 +1,20 @@
+
+
+<% if current_user %>
+
+<% @Characters.each do |character| %>
+
+<h1><%= character.name %></h1>
+
+<p>Vie: <%= character.vie %></p>
+<p>Force: <%= character.force %></p>
+<p>Expérience: <%= character.experience %> XP</p>
+
+<% end %>
+
+<% else %>
+
+Adieu
+
+<% end %>
+

@@ -1,0 +1,147 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import url(http://fonts.googleapis.com/css?family=Rokkitt);
+
+body {
+	background-image: url('bg.png');
+	background-attachment: fixed;
+	background-color: #0d0601;
+	background-size: 100%;
+	color: #bbb;
+	font-family: 'Rokkitt', arial;
+	font-size: 18px;
+	margin: 0px;
+	padding: 0px;
+}
+
+a {
+	color: #b12e21;
+}
+
+h1 {
+	color: white;
+	text-shadow: 0px 0px 5px black;
+	margin: 0 0 10 0;
+}
+
+span.input-before {
+	background: url('input_before.png');
+	height: 29px;
+	width: 26px;
+	display: inline-block;
+	vertical-align:text-bottom;
+}
+
+input[type="text"], input[type="password"] {
+	background: url('input_content.png');
+	border: none;
+	height: 29px;
+	margin: -11px 0px 0px -3px;
+	padding: 0;
+/*	width: 183px;*/
+	color: white;
+	display: inline;
+	vertical-align: middle;
+}
+
+span.input-after {
+	background-image: url('input_after.png');
+	height: 29px;
+	width: 23px;
+	display: inline-block;
+	vertical-align:text-bottom;
+}
+
+input {
+	background: url('button.png');
+	width: 153px;
+	height: 57px;
+	border: 0;
+	color: white;
+	padding: -5px 0px 0px 0px;
+}
+
+input[type="file"] {
+	background: transparent !important;
+	width: auto !important;
+	height: auto !important;
+}
+
+
+#wrapper {
+	width: 1010px;
+	margin: 0 auto;
+}
+
+header {
+	background-image: url('Header.png');
+	height: 294px;
+	/*width: 1000px;*/
+	text-align: right;
+	font-weight: bold;
+	color: white;
+	text-shadow: 0px 0px 5px black;
+}
+
+header p {
+	margin: 0;
+	padding: 10px;
+	font-size: 14px;
+}
+
+/*section:before {
+	background-image: url('Template-RPG_04.gif');
+	width: 53px;
+	height: 83px;
+}*/
+
+section {
+	
+	margin: 0;
+	padding: 0;
+}
+
+section img {
+	margin: 0;
+	padding: 0;
+}
+
+#faischier {
+	margin-top: -5px
+}
+
+#content {
+	background-image: url('content.png');
+	margin-top: -6px;
+	background-repeat: repeat-y;
+	padding: 5px 30px 20px 20px;
+	min-height: 500px;
+}
+
+#content img {
+	max-width: 100%;
+}
+
+#map {
+	/*width: 99%;*/
+	box-shadow: 0px 0px 10px black;
+	border-radius: 0px;
+}
+
+.clear {
+	clear: both;
+}

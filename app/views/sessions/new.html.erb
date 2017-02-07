@@ -1,0 +1,12 @@
+<center>
+	<h1>Connexion</h1>
+
+<%= form_tag sessions_path do %>
+<p>
+	<span class="input-before"></span><%= text_field_tag :email, params[:email], :placeholder => "Email" %><span class="input-after"></span>
+</p>
+<p>
+	<span class="input-before"></span><%= password_field_tag :password, :placeholder => "Mot de passe" %><span class="input-after"></span>
+</p>
+<p class="button"><%= submit_tag "Se connecter" %></p>
+<% end %>

@@ -1,0 +1,20 @@
+<center>
+<h1>Créer un personnage</h1>
+
+<%= form_for @character do |f| %>
+<% if @character.errors.any? %>
+<div class="error_messages">
+	<h2>Erreur</h2>
+	<ul>
+		<% for message in @character.errors.full_messages %>
+		<li><%= message %></li>
+		<% end %>
+	</ul>
+</div>
+<% end %>
+<p>
+	<span class="input-before"></span><%= f.text_field :name, :placeholder => "Nom du personnage" %><span class="input-after"></span>
+</p>
+
+<p class="button"><%= f.submit "Créer" %></p>
+<% end %>

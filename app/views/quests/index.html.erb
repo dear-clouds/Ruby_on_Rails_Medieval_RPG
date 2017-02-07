@@ -1,0 +1,17 @@
+<% if current_user %>
+
+<center><h1>Liste des quêtes en cours</h1></center>
+
+<% @quests.each do |quest| %>
+
+<h3><a href="quests/<%= quest.id %>"><%= quest.title %></a> (<%= quest.experience %> XP)</h3>
+
+
+
+<% end %>
+
+<% else %>
+
+Adieu
+
+<% end %>

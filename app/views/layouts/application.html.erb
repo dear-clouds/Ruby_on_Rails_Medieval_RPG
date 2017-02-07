@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Plop</title>
+	<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
+</head>
+<body>
+	<div id="wrapper">
+		<header>
+
+			<% if current_user %>
+			<p>Connecté en tant que <%= current_user.email %>.
+				<%= link_to "Log out", log_out_path %></p>
+				<% else %>
+				<a href="/log_in"><%= image_tag("Login.png", :alt => "Se connecter") %></a>
+				<% end %>
+
+
+			</header>
+
+			<section>
+				<% if current_user %>
+				<%= image_tag("Template-RPG_04.gif", :alt => "Machin") %><a href="/characters"><%= image_tag("Personnage.gif", :alt => "Machin") %></a><%= image_tag("Inventaire.gif", :alt => "Machin") %><a href="/quests"><%= image_tag("Quetes.gif", :alt => "Machin") %></a><a href="/"><%= image_tag("Jouer.gif", :alt => "Machin") %></a><%= image_tag("Skills.gif", :alt => "Machin") %><%= image_tag("Succes.gif", :alt => "Machin") %><a href="/map"><%= image_tag("Carte.gif", :alt => "Machin") %></a><%= image_tag("Template-RPG_12.gif", :alt => "Machin") %><%= image_tag("Template-RPG_13.gif", :alt => "Machin", :id => "faischier") %>
+
+				<% else %>
+				<%= image_tag("Template-RPG_04.gif", :alt => "Machin") %><a href="/"><%= image_tag("Home.gif", :alt => "Machin") %></a><%= image_tag("FAQ.gif", :alt => "Machin") %><%= image_tag("Forum.gif", :alt => "Machin") %><a href="/sign_up"><%= image_tag("Inscription.gif", :alt => "Machin") %></a><%= image_tag("About.gif", :alt => "Machin") %><%= image_tag("Screens.gif", :alt => "Machin") %><%= image_tag("Contact.gif", :alt => "Machin") %><%= image_tag("Template-RPG_12.gif", :alt => "Machin") %><%= image_tag("Template-RPG_13.gif", :alt => "Machin", :id => "faischier") %>
+				<% end %>
+			</section>
+			<div id="content">
+
+
+				<% flash.each do |name, msg| %>
+				<%= content_tag :div, msg, :id => "flash_#{name}" %>
+				<% end %>
+
+				<%= yield %>
+
+			</div>
+		</div>
+	</body>
+	</html>

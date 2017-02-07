@@ -1,0 +1,17 @@
+<% provide(:title, @quest.title) %>
+
+
+
+<div style="float: left;"><%= image_tag(@quest.png, :alt => "Noel") %></div>
+
+<center>
+	<h1><%= @quest.title %></h1>
+	<h2><%= @quest.experience %> XP</h2>
+</center>
+
+
+<p><%= @quest.content %></p>
+
+<p><%= image_tag(@quest.item, :alt => "Item") %></p>
+
+<div class="clear"></div>
